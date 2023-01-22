@@ -6,8 +6,18 @@ import styles from "@/styles/Home.module.css";
 
 export default function Home() {
   return (
+   <>
+   <Head>
+      <title>Жирные бургеры /Главная</title>
+      <meta name="title" content="Жирные бургеры"/>
+
+   </Head>
     <div className={styles.container}>
       <h1 className={`${styles.title} font-effect-fire-animation`}>Главная</h1>
+      <div className={styles.mainImage}>
+         <Image src="/fatburger.png" alt="fat burger" width={400} height={300}/>
+      </div>
+      
       <p className={styles.text}>
         Что такое идеальный бургер? Лист свежего салата, мягкие булочки, сочное
         мясо. О других составляющих начинки можно поспорить, ведь это дело
@@ -19,5 +29,6 @@ export default function Home() {
       </p>
       <Link href="/burgers" className={styles.btn}>Все бургеры</Link>
     </div>
+    </>
   );
 }
