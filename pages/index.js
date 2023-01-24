@@ -15,7 +15,7 @@ export default function Home() {
     <div className={styles.container}>
       <h1 className={`${styles.title} font-effect-fire-animation`}>Главная</h1>
       <div className={styles.mainImage}>
-         <Image src="/fatburger.png" alt="fat burger" width={400} height={300}/>
+         <Image src="/fatburger.png" alt="fat burger" width={350} height={300}/>
       </div>
       
       <p className={styles.text}>
