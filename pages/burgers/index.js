@@ -5,7 +5,7 @@ import styles from "@/styles/Burgers.module.css";
 export const getStaticProps = async () => {
    const res = await fetch('http://localhost:5000/items');
    const data = await res.json();
- 
+   
    return {
      props: { burgers: data }
    }
@@ -13,13 +13,13 @@ export const getStaticProps = async () => {
 
 const Burgers=({burgers})=>{
    
-  
+   console.log(burgers)
    return(
       <div>
          <h1>Наши бургеры</h1>
          {burgers.map(burger =>{
             return(
-               <Link href={`/burgers/{${burger.id}}`} key={burger.id} className={styles.burgerCard}>
+               <Link href={`/burgers/${burger.id}`} key={burger.id} className={styles.burgerCard}>
                <div className={styles.imageContainer}>
              <Image 
                 src={`${burger.image}`} 
